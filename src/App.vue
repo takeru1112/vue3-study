@@ -1,8 +1,10 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <h1>Vue 3 Study</h1>
-  <h2>TS</h2>
+  <h2>JS</h2>
   <Count />
+  <h2>TS</h2>
+  <CountTs />
   <h2>TS with setup</h2>
   <CountComposite1 />
   <h2>TS with composables</h2>
@@ -11,6 +13,7 @@
 
 <script>
 import Count from './components/Count.vue'
+import CountTs from './components/CountTs.vue'
 import CountComposite1 from './components/CountComposite1.vue'
 import CountComposite2 from './components/CountComposite2.vue'
 
@@ -18,6 +21,7 @@ export default {
   name: 'App',
   components: {
     Count,
+    CountTs,
     CountComposite1,
     CountComposite2
   }

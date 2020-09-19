@@ -1,20 +1,25 @@
 <template>
-  <div class="count">
+  <div>
     <button @click="decrement" type="button">-</button>
     <span>{{state.num}}</span>
     <button @click="increment" type="button">+</button>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Count',
+<script lang="ts">
+import { defineComponent } from "vue";
+/*
+ * Vue2.xでは
+ * export default Vue.extend
+ * としていた部分をdefineComponentに変更
+ */
+export default defineComponent({
+  name: 'CountComposite1',
   data() {
-    const state = {
-      num: 0
-    }
     return {
-      state
+      state: {
+        num: 0
+      }
     }
   },
   methods: {
@@ -25,7 +30,7 @@ export default {
       this.state.num -= 1
     }
   }
-};
+});
 </script>
 
 <style lang="css" scoped>
