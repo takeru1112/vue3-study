@@ -14,6 +14,7 @@ import useCounter from './composables/useCounter'
 export default defineComponent({
   name: 'CountComposite2',
   setup(){
+    // 利用したいcomposableを実行して機能を取り出す
     const { count, increment, decrement } = useCounter()
     const state = {
       counter: count,

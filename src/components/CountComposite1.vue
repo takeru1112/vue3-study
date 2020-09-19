@@ -11,6 +11,7 @@ import { defineComponent, reactive } from "vue";
 export default defineComponent({
   name: 'CountComposite1',
   setup(){
+    // reactiveメソッドを用いてdataに引き渡す
     const state = reactive({
       num: 0
     })
