@@ -1,5 +1,5 @@
 <template>
-  <div class="count">
+  <div>
     <button @click="decrement" type="button">-</button>
     <span>{{state.num}}</span>
     <button @click="increment" type="button">+</button>
@@ -7,25 +7,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive } from "vue";
 export default defineComponent({
-  name: 'Count',
-  data() {
-    const state = {
+  name: 'CountComposite1',
+  setup(){
+    const state = reactive({
       num: 0
+    })
+    const increment = () => {
+      state.num += 1
+    }
+    const decrement = () => {
+      state.num -= 1
     }
     return {
-      state
+      state,
+      increment,
+      decrement
     }
   },
-  methods: {
-    increment() {
-      this.state.num += 1
-    },
-    decrement() {
-      this.state.num -= 1
-    }
-  }
 });
 </script>
 

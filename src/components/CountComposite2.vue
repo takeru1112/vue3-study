@@ -1,31 +1,27 @@
 <template>
-  <div class="count">
+  <div>
     <button @click="decrement" type="button">-</button>
-    <span>{{state.num}}</span>
+    <span>{{state.counter.num}}</span>
     <button @click="increment" type="button">+</button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import useCounter from './composables/useCounter'
 export default defineComponent({
-  name: 'Count',
-  data() {
+  name: 'CountComposite2',
+  setup(){
+    const {count, increment, decrement} = useCounter()
     const state = {
-      num: 0
+      counter: count
     }
     return {
-      state
+      state,
+      increment,
+      decrement
     }
   },
-  methods: {
-    increment() {
-      this.state.num += 1
-    },
-    decrement() {
-      this.state.num -= 1
-    }
-  }
 });
 </script>
 
