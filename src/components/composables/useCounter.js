@@ -1,9 +1,9 @@
 import { computed, reactive } from "vue"
 
-export default function Counter() {
+export default function Counter(defaultCount = 0) {
   const text= computed(()=> `${count.num}回`)
   const count = reactive({
-    num: 0,
+    num: defaultCount,
     text
   })
   const increment = () => {
