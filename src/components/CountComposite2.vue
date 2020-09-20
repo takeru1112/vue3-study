@@ -13,9 +13,15 @@ import useCounter from './composables/useCounter'
 
 export default defineComponent({
   name: 'CountComposite2',
-  setup(){
+  props: {
+    defaultValue: {
+      type: Number,
+      default: 0
+    }
+  },
+  setup(props){
     // 利用したいcomposableを実行して機能を取り出す
-    const { count, increment, decrement } = useCounter(10)
+    const { count, increment, decrement } = useCounter(props.defaultValue)
     const state = {
       counter: count,
     }

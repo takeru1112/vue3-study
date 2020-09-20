@@ -2,13 +2,13 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <h1>Vue 3 Study</h1>
   <h2>JS</h2>
-  <Count />
+  <Count :defaultValue="10" />
   <h2>TS</h2>
-  <CountTs />
+  <CountTs :defaultValue="10" />
   <h2>TS with setup</h2>
-  <CountComposite1 />
+  <CountComposite1 :defaultValue="10" />
   <h2>TS with composables</h2>
-  <CountComposite2 />
+  <CountComposite2 :defaultValue="10" />
 </template>
 
 <script>

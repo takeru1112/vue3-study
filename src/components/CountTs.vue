@@ -15,10 +15,16 @@ import { defineComponent } from "vue";
  */
 export default defineComponent({
   name: 'CountComposite1',
+  props: {
+    defaultValue: {
+      type: Number,
+      default: 0
+    }
+  },
   data() {
     return {
       state: {
-        num: 0
+        num: this.defaultValue
       }
     }
   },

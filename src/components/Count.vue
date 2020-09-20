@@ -9,9 +9,15 @@
 <script>
 export default {
   name: 'Count',
+  props: {
+    defaultValue: {
+      type: Number,
+      default: 0
+    }
+  },
   data() {
     const state = {
-      num: 0
+      num: this.defaultValue
     }
     return {
       state

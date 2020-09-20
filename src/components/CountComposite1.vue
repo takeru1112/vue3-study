@@ -10,10 +10,16 @@
 import { defineComponent, reactive } from "vue";
 export default defineComponent({
   name: 'CountComposite1',
-  setup(){
+  props: {
+    defaultValue: {
+      type: Number,
+      default: 0
+    }
+  },
+  setup(props){
     // reactiveメソッドを用いてdataに引き渡す
     const state = reactive({
-      num: 0
+      num: props.defaultValue
     })
     const increment = () => {
       state.num += 1
