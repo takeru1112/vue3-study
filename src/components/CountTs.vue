@@ -1,7 +1,7 @@
 <template>
   <div>
     <button @click="decrement" type="button">-</button>
-    <span>{{state.num}}</span>
+    <span>{{ state.num }}</span>
     <button @click="increment" type="button">+</button>
   </div>
 </template>
@@ -14,7 +14,7 @@ import { defineComponent } from "vue";
  * としていた部分をdefineComponentに変更
  */
 export default defineComponent({
-  name: 'CountComposite1',
+  name: "CountComposite1",
   props: {
     defaultValue: {
       type: Number,
@@ -26,14 +26,14 @@ export default defineComponent({
       state: {
         num: this.defaultValue
       }
-    }
+    };
   },
   methods: {
     increment() {
-      this.state.num += 1
+      this.state.num += 1;
     },
     decrement() {
-      this.state.num -= 1
+      this.state.num -= 1;
     }
   }
 });

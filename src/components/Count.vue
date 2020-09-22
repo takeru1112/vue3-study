@@ -1,14 +1,14 @@
 <template>
   <div class="count">
     <button @click="decrement" type="button">-</button>
-    <span>{{state.num}}</span>
+    <span>{{ state.num }}</span>
     <button @click="increment" type="button">+</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Count',
+  name: "Count",
   props: {
     defaultValue: {
       type: Number,
@@ -18,17 +18,17 @@ export default {
   data() {
     const state = {
       num: this.defaultValue
-    }
+    };
     return {
       state
-    }
+    };
   },
   methods: {
     increment() {
-      this.state.num += 1
+      this.state.num += 1;
     },
     decrement() {
-      this.state.num -= 1
+      this.state.num -= 1;
     }
   }
 };

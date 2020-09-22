@@ -1,7 +1,7 @@
 import { computed, reactive } from "vue"
 
 export default function Counter(defaultCount = 0) {
-  const text= computed(()=> `${count.num}回`)
+  const text = computed(() => `${count.num}回`)
   const count = reactive({
     num: defaultCount,
     text
